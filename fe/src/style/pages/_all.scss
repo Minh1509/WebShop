@@ -1,0 +1,83 @@
+@use "sass:map";
+@import "theme.scss";
+* {
+    margin : 0;
+    padding : 0;
+    font-family: Roboto;
+}
+
+.container {
+    max-width: 1170px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+
+}
+.row {
+    display : flex;
+    flex-wrap: wrap;
+}
+.col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.header-top-left {
+    display : flex;
+    align-items: center;
+    padding : 10px 0;
+    ul {
+        display : flex;
+        list-style: none;
+        column-gap: 10px;
+    }
+    li {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color : map.get($theme-colors, "normal-text");
+        column-gap : 2px;
+    }
+    li:first-child {
+        margin-right: 10px;
+        position: relative;
+        &:after {
+            position: absolute;
+            right: -12px;
+            top: 1px;
+            width: 1px;
+            height: 20px;
+            background: #000000;
+            opacity: 0.1;
+            content: "";
+            
+        }
+    }
+}
+
+.header-top-right {
+    display: flex;
+    justify-content: end;
+    padding : 10px 0;
+    ul {
+        display : flex;
+        list-style: none;
+        column-gap: 5px;
+        a{
+            font-size: 14px;
+            color: map.get($theme-colors, "normal-text");
+            text-decoration: none;
+        }
+        li:last-child {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+            span {
+                font-size: 14px;
+                margin-left: 2px;
+            }
+        }
+    }
+}
