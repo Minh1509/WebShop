@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.scss";
 import { MdOutlineMail } from "react-icons/md";
 import { Link } from "react-router-dom";
@@ -8,8 +8,32 @@ import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { CiUser } from "react-icons/ci";
 import { formatter } from "utils/formatter";
+import { FaShoppingCart } from "react-icons/fa";
+import { ROUTER } from "utils/router";
 
 const Header = () => {
+  const [menus, setMenus] = useState([
+    {
+      name: "Trang chủ",
+      path: ROUTER.USER.HOME,
+    },
+    {
+      name: "Sản phẩm",
+      path: ROUTER.USER.PRODUCT,
+    },
+    {
+      name: "Cửa hàng",
+      path: ROUTER.USER.HOME,
+    },
+    {
+      name: "Bài viết",
+      path: ROUTER.USER.HOME,
+    },
+    {
+      name: "Liên hệ",
+      path: ROUTER.USER.HOME,
+    },
+  ]);
   return (
     <>
       <div class="header-top">
@@ -22,7 +46,9 @@ const Header = () => {
                     <MdOutlineMail />
                     minh@gmail.com
                   </li>
-                  <li>Miễn phí vận chuyển cho đơn hàng trên {formatter(200000)}</li>
+                  <li>
+                    Miễn phí vận chuyển cho đơn hàng trên {formatter(200000)}
+                  </li>
                 </ul>
               </div>
             </div>
@@ -57,6 +83,43 @@ const Header = () => {
                   </li>
                 </ul>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-3">
+            <div className="header-logo">
+              <h1>WebShop</h1>
+            </div>
+          </div>
+          <div className="col-lg-6">
+            <nav className="header_menu">
+              <ul>
+                {menus?.map((menu, menuKey) => {
+                  return (
+                    <li key={menuKey} className={menuKey === 0 ? "active" : ""}>
+                      <Link to={menu?.path}>{menu?.name}</Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </nav>
+          </div>
+          <div className="col-lg-3">
+            <div className="header_cart">
+              <div className="header_cart_price">
+                <span>{formatter(10020030)}</span>
+              </div>
+              <ul>
+                <li>
+                  <Link to="">
+                    <FaShoppingCart /> <span>5</span>
+                  </Link>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
