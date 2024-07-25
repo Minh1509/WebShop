@@ -4,6 +4,7 @@ $TABLET_DEVICE: "TABLET_DEVICE";
 $WIDE_MOBILE:"WIDE_MOBILE";
 $SMALL_DEVICES: "SMALL_DEVICE";
 
+
 @mixin Responsive($canvas) {
     @if $canvas == $DESKTOP {
         @media  screen and (min-width: 1200px) {
