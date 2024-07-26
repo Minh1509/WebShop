@@ -20,6 +20,21 @@ const Header = () => {
     {
       name: "Sản phẩm",
       path: ROUTER.USER.PRODUCT,
+      isShowMenu: false,
+      child: [
+        {
+          name: "Thịt",
+          path: "",
+        },
+        {
+          name: "Cá",
+          path: "",
+        },
+        {
+          name: "Rau củ",
+          path: "",
+        },
+      ],
     },
     {
       name: "Cửa hàng",
@@ -88,7 +103,6 @@ const Header = () => {
         </div>
       </div>
 
-
       <div className="container">
         <div className="row">
           <div className="col-lg-3">
@@ -99,13 +113,20 @@ const Header = () => {
           <div className="col-lg-6">
             <nav className="header_menu">
               <ul>
-                {menus?.map((menu, menuKey) => {
-                  return (
-                    <li key={menuKey} className={menuKey === 0 ? "active" : ""}>
-                      <Link to={menu?.path}>{menu?.name}</Link>
-                    </li>
-                  );
-                })}
+                {menus?.map((menu, menuKey) => (
+                  <li key={menuKey} className={menuKey === 0 ? "active" : ""}>
+                    <Link to={menu?.path}>{menu?.name}</Link>
+                    {menu.child && (
+                      <ul className="header_menu_dropdown">
+                        {menu.child.map((childItem, childKey) => (
+                          <li key={`${childKey}-${childKey}`}>
+                            <Link to={childItem.path}>{childItem.name}</Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </li>
+                ))}
               </ul>
             </nav>
           </div>
