@@ -19,6 +19,15 @@
     display : flex;
     flex-wrap: wrap;
 }
+
+.button_submmit{
+    font-size: 14px;
+    color: #ffffff;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 16px 30px 17px;
+    background: map.get($theme-colors, "main");
+}
 .col-6 {
     flex: 0 0 50%;
     max-width: 50%;
