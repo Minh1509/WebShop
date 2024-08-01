@@ -16,7 +16,7 @@ const Footer = () => {
               <div className="footer_about">
                 <h1>WebShop</h1>
                 <ul>
-                  <li>Địa chỉ: 58 Tố Hữu, Nam Từ liêm , Hà Nội</li>
+                  <li>Địa chỉ: 58 Tố Hữu</li>
                   <li>Phone: 2909022</li>
                   <li>Email:nguyenquangminh</li>
                 </ul>

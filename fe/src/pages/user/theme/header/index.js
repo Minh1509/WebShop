@@ -10,8 +10,11 @@ import { CiUser } from "react-icons/ci";
 import { formatter } from "utils/formatter";
 import { FaShoppingCart } from "react-icons/fa";
 import { ROUTER } from "utils/router";
+import { TfiAlignJustify } from "react-icons/tfi";
+import { AiOutlinePhone } from "react-icons/ai";
 
 const Header = () => {
+  const [showMenu, setShowMenu] = useState(true);
   const [menus, setMenus] = useState([
     {
       name: "Trang chủ",
@@ -142,6 +145,62 @@ const Header = () => {
                   </Link>
                 </li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="container">
+        <div className="row hero">
+          <div className="col-lg-3 hero_detail">
+            <div
+              className="hero_detail_all"
+              onClick={() => setShowMenu(!showMenu)}
+            >
+              <TfiAlignJustify />
+              <span>Danh mục sản phẩm</span>
+            </div>
+            <ul className={showMenu ? "" : "hidden"}>
+              <li>
+                <Link to="">Thịt</Link>
+              </li>
+              <li>
+                <Link to="">Rau củ</Link>
+              </li>
+              <li>
+                <Link to="">Cá</Link>
+              </li>
+              <li>
+                <Link to="">Nước uống</Link>
+              </li>
+            </ul>
+          </div>
+          <div className="col-lg-9">
+            <div className="hero_search">
+              <div className="hero_search_form">
+                <form>
+                  <input type="text" placeholder="Bạn muốn tìm kiếm gì..." />
+                  <button type="submit">Tìm kiếm</button>
+                </form>
+              </div>
+              <div className="hero_search_phone">
+                <AiOutlinePhone />
+                <div className="hero_detail_phone">
+                  <p>0123.456.789</p>
+                  <span>Liên hệ 24/7</span>
+                </div>
+              </div>
+            </div>
+            <div className="hero_item">
+              <div className="hero_text">
+                <p>Trái cây tươi</p>
+                <h2>
+                  Rau quả <br /> sạch 100%
+                </h2>
+                <span>Miễn phí giao hàng tận nơi</span> <br></br>
+                <Link to={"#"} className="primary-btn">
+                  Mua ngay
+                </Link>
+              </div>
             </div>
           </div>
         </div>
