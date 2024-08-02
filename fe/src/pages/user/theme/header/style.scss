@@ -5,6 +5,7 @@
 }
 
 .hero_detail {
+  
   position: relative;
   .hero_detail_all {
     background: map.get($theme-colors, "main");
@@ -123,7 +124,7 @@
   }
 }
 .hero_item {
-    margin: 15px;
+    margin: 15px 0 0 15px;
     background-image: url(/assets/users/images/hero/logo.jpg);
     background-size: cover;
     height: 410px;
