@@ -8,7 +8,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { CiUser } from "react-icons/ci";
 import { formatter } from "utils/formatter";
-import { FaShoppingCart } from "react-icons/fa";
+import { IoCartOutline } from "react-icons/io5";
 import { ROUTER } from "utils/router";
 import { TfiAlignJustify } from "react-icons/tfi";
 import { AiOutlinePhone } from "react-icons/ai";
@@ -141,7 +141,7 @@ const Header = () => {
               <ul>
                 <li>
                   <Link to="">
-                    <FaShoppingCart /> <span>5</span>
+                    <IoCartOutline  /> <span>5</span>
                   </Link>
                 </li>
               </ul>
