@@ -2,36 +2,151 @@
 @import "style/pages/theme.scss";
 
 .container_categories_slider {
-    max-width: 1200px !important;
-    margin-top: 30px !important;
-    .categories_slider{
+  max-width: 1200px !important;
+  margin-top: 30px !important;
+  .categories_slider {
+    .categories_slider_item {
+      height: 300px;
+      position: relative;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top center;
+      border-radius: 5px;
 
-        .categories_slider_item {
-            height: 300px;
-            position: relative;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: top center;
-            border-radius: 5px;
-
-            p {
-                position: absolute;
-                left: 13%;
-                bottom: 20px;
-                text-align: center;
-                padding: 10px  0 10px;
-                text-transform: uppercase;
-                font-size: 18px;
-                font-weight: 700;
-                width: 220px;
-                cursor: pointer;
-            }
-            :hover {
-                background: rgb(237 237 237);
-            }
-        }
-        .react-multi-carousel-item:not(:first-child):not(:last-child) {
-            margin: 0 5px;
-        }
+      p {
+        position: absolute;
+        left: 13%;
+        bottom: 20px;
+        text-align: center;
+        padding: 10px 0 10px;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 700;
+        width: 220px;
+        cursor: pointer;
+      }
+      :hover {
+        background: rgb(237 237 237);
+      }
     }
+    .react-multi-carousel-item:not(:first-child):not(:last-child) {
+      margin: 0 5px;
+    }
+  }
+}
+.features {
+  margin-top: 50px;
+  .section_title {
+    margin-bottom: 50px;
+    text-align: center;
+    h2 {
+      position: relative;
+      color: map.get($theme-colors, "normal-text");
+      font-size: 22px;
+    }
+    h2:after {
+      position: absolute;
+      left: 0;
+      bottom: -15px;
+      right: 0;
+      height: 4px;
+      width: 80px;
+      background-color: map.get($theme-colors, "main");
+      content: "";
+      margin: 0 auto;
+    }
+  }
+  .react-tabs {
+    ul {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+
+      li {
+        list-style: none;
+        color: map.get($theme-colors, "normal-text");
+        font-size: 18px;
+        margin-right: 25px;
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.feature_item {
+  margin-bottom: 50px;
+  .feature_item_pic {
+    height: 270px;
+    position: relative;
+    background-position: center;
+    overflow: hidden;
+    &:hover {
+      .feature_item_pic_hover {
+        bottom: -6% !important;
+      }
+    }
+    ul {
+      position: absolute;
+
+      left: 0;
+      bottom: -40%;
+      width: 100%;
+      text-align: center;
+      transition: all 0.5s;
+
+      li {
+        font-size: 16px;
+        color: map.get($theme-colors, "normal-text");
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        transition: all 0.3s;
+      }
+      li:hover {
+        background: #f5f5f5;
+        transform: rotate(360deg);
+      }
+    }
+  }
+  .feature_item_text {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h6 {
+      margin-bottom: 8px;
+      margin-right: 10px;
+      :hover {
+        color: map.get($theme-colors, "main");
+        background: #f5f5f5;
+        border: none;
+      }
+    }
+    a {
+      width: 100%;
+      text-decoration: none;
+      font-size: 16px;
+      color: map.get($theme-colors, "normal-text");
+      font-weight: 500;
+    }
+    span {
+      font-size: 20px;
+      font-weight: 700;
+      color: map.get($theme-colors, "normal-text");
+      transition: all 0.3s;
+    }
+  }
+}
+.banner {
+  display: flex;
+  margin-bottom: 20px;
+  gap: 20px;
+  img {
+    width: 100%;
+  }
 }
