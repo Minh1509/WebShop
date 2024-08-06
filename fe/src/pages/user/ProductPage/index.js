@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import "./style.scss";
+import BreakCrule from "../theme/breakcrule/index.js";
 
 const ProductPage = () => {
     return (
-        <div>
-            <h1> Danh sach san pham</h1>
-        </div>
+        <>
+            <BreakCrule name="Sản phẩm"/>
+        </>
     )
 }
 export default ProductPage;
