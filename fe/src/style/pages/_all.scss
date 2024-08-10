@@ -20,7 +20,7 @@
     flex-wrap: wrap;
 }
 
-.button_submmit{
+.button_submit{
     font-size: 14px;
     color: #ffffff;
     text-transform: uppercase;
@@ -116,7 +116,12 @@
     .col-lg-6 {
         flex: 0 0 50%;
         max-width: 50%;
+
     }
+  .col-lg-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
 }
 
 .header_cart {

@@ -129,49 +129,49 @@ const HomePage = () => {
         });
 
         return (<Tabs>
-                <TabList>{tabList}</TabList>
-                {tabPanels.map((item, key) => (<TabPanel key={key} className="row">
-                        {item}
-                    </TabPanel>))}
-            </Tabs>);
+            <TabList>{tabList}</TabList>
+            {tabPanels.map((item, key) => (<TabPanel key={key} className="row">
+                {item}
+            </TabPanel>))}
+        </Tabs>);
     };
     return (<>
-            {/* Categories Begin */}
-            <div className="container container_categories_slider">
-                <Carousel responsive={responsive} className="categories_slider">
-                    {Categories_Item.map((item, key) => (<div
-                            key={key}
-                            className="categories_slider_item"
-                            style={{backgroundImage: `url(${item.Img})`}}
-                        >
-                            <p>{item.name}</p>
-                        </div>))}
-                </Carousel>
+        {/* Categories Begin */}
+        <div className="container container_categories_slider">
+            <Carousel responsive={responsive} className="categories_slider">
+                {Categories_Item.map((item, key) => (<div
+                    key={key}
+                    className="categories_slider_item"
+                    style={{backgroundImage: `url(${item.Img})`}}
+                >
+                    <p>{item.name}</p>
+                </div>))}
+            </Carousel>
+        </div>
+        {/* Categories End */}
+        {/* Features Begin */}
+        <div className="container">
+            <div className="features">
+                <div className="section_title">
+                    <h2>Sản phẩm nổi bật</h2>
+                </div>
+                {renderFeaturedProduct(featureProduct)}
             </div>
-            {/* Categories End */}
-            {/* Features Begin */}
-            <div className="container">
-                <div className="features">
-                    <div className="section_title">
-                        <h2>Sản phẩm nổi bật</h2>
-                    </div>
-                    {renderFeaturedProduct(featureProduct)}
+        </div>
+        {/* Features End */}
+        <div className="container">
+            <div className="banner ">
+                <div className="banner_pic col-lg-6">
+                    <img src={bannerImg1} alt="banner"/>
+
+                </div>
+                <div className="banner_pic col-lg-6">
+                    <img src={bannerImg2} alt="banner"/>
+
                 </div>
             </div>
-            {/* Features End */}
-            <div className="container">
-                <div className="banner ">
-                    <div className="banner_pic col-lg-6">
-                        <img src={bannerImg1} alt="banner"/>
-
-                    </div>
-                    <div className="banner_pic col-lg-6">
-                        <img src={bannerImg2} alt="banner"/>
-
-                    </div>
-                </div>
-            </div>
-        </>);
+        </div>
+    </>);
 };
 
 export default HomePage;

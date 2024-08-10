@@ -1,5 +1,6 @@
 @use "sass:map";
-@import "style/pages/theme.scss";
+@import "../../../style/pages/theme.scss";
+
 
 .container_categories_slider {
   max-width: 1200px !important;
