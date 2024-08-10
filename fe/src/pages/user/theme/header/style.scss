@@ -1,11 +1,11 @@
 @use "sass:map";
-@import "style/pages/theme.scss";
+@import "../../../../style/pages/theme.scss";
+
 .header-top {
   background: #f5f5f5;
 }
 
 .hero_detail {
-  
   position: relative;
   .hero_detail_all {
     background: map.get($theme-colors, "main");
@@ -30,7 +30,7 @@
   ul {
     position: absolute;
     opacity: 1;
-    background: transparent;
+    background: #f5f5f5;
     width: 99%;
     border: none;
     border: 1px solid #f5f5f5;

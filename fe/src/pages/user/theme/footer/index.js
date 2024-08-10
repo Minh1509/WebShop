@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { CiFacebook } from "react-icons/ci";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer>
@@ -18,7 +17,7 @@ const Footer = () => {
                 <ul>
                   <li>Địa chỉ: 58 Tố Hữu</li>
                   <li>Phone: 2909022</li>
-                  <li>Email:nguyenquangminh</li>
+                  <li>Email:nguyenquangminh@gmail.com</li>
                 </ul>
               </div>
             </div>
@@ -57,7 +56,7 @@ const Footer = () => {
                   <form action="">
                     <div className="input_group">
                       <input type="text" placeholder="Nhập email"></input>
-                      <button type="submit" className="button_submmit">
+                      <button type="submit" className="button_submit">
                         Đăng ký
                       </button>
                     </div>
